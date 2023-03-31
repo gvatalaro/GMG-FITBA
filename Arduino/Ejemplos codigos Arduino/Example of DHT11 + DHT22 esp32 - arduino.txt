@@ -1,0 +1,26 @@
+#include "DHT.h"
+#define DHT11PIN 2
+#define DHT22PIN 3
+
+DHT dht11(DHT11PIN, DHT11 );
+DHT dht22(DHT22PIN, DHT22 );
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("DHTxx test!");
+
+  dht11.begin();
+  dht22.begin();
+}
+
+void loop() {
+  delay(2000);
+  float h11 = dht11.readHumidity();
+  float t11 = dht11.readTemperature();
+  float f11 = dht11.readTemperature(true);
+
+  float h22 = dht22.readHumidity();
+  float t22 = dht22.readTemperature();
+  float f22 = dht22.readTemperature(true);
+  //do print them..
+}

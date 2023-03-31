@@ -1,0 +1,8 @@
+Sensores:
+
+HTU21-SHT21 con módulo
+
+DHT11 con módulo
+
+DHT22 sin módulo
+
